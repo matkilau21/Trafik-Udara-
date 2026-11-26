@@ -1,5 +1,6 @@
 import { Bell, ListFilter, Volume2, VolumeX } from 'lucide-react';
 import { Flight } from '../types/flight';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface TopBarProps {
   flights: Flight[];
@@ -62,6 +63,7 @@ export function TopBar({
 
         {/* Zone 3: Kawalan Tindakan */}
         <div className="pointer-events-auto flex items-center gap-2 shrink-0">
+          <PWAInstallButton />
           <button
             type="button"
             onClick={() => onToggleDrawer('flights')}

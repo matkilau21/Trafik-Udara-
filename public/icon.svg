@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <radialGradient id="bg" cx="35%" cy="25%" r="85%">
+      <stop offset="0%" stop-color="#13294b" />
+      <stop offset="55%" stop-color="#091326" />
+      <stop offset="100%" stop-color="#050811" />
+    </radialGradient>
+    <linearGradient id="jet" x1="160" y1="140" x2="360" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#e0f2fe" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <linearGradient id="arc" x1="100" y1="360" x2="412" y2="152" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="55%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#5eead4" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)" />
+  <circle cx="256" cy="256" r="186" stroke="#38bdf8" stroke-opacity="0.18" stroke-width="3" />
+  <circle cx="256" cy="256" r="134" stroke="#38bdf8" stroke-opacity="0.28" stroke-width="2.5" stroke-dasharray="10 10" />
+  <circle cx="256" cy="256" r="82" stroke="#38bdf8" stroke-opacity="0.22" stroke-width="2" />
+  <path d="M108 352 C 176 238, 286 174, 404 148" stroke="url(#arc)" stroke-width="8" stroke-linecap="round" />
+  <circle cx="108" cy="352" r="11" fill="#f59e0b" />
+  <circle cx="108" cy="352" r="22" stroke="#fbbf24" stroke-opacity="0.55" stroke-width="3" />
+  <g transform="translate(274 236) rotate(42)">
+    <path
+      d="M0 -92 C12 -68 12 -32 12 -16 L84 26 L82 42 L12 22 L10 62 L38 82 L36 94 L0 80 L-36 94 L-38 82 L-10 62 L-12 22 L-82 42 L-84 26 L-12 -16 C-12 -32 -12 -68 0 -92 Z"
+      fill="url(#jet)"
+    />
+  </g>
+</svg>

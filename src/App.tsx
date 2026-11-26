@@ -4,6 +4,7 @@ import { BottomDock } from './components/BottomDock';
 import { FlightsDrawer, NotificationsDrawer } from './components/Drawers';
 import { FlightInspector } from './components/FlightInspector';
 import { NotificationToasts } from './components/NotificationToasts';
+import { OfflineIndicator } from './components/OfflineIndicator';
 import { TopBar } from './components/TopBar';
 import { AIRPORT_MAP } from './data/airports';
 import { useFlightSimulation } from './hooks/useFlightSimulation';
@@ -411,6 +412,9 @@ export default function App() {
         onToggleDrawer={handleToggleDrawer}
         onToggleSound={() => setSoundEnabled((prev) => !prev)}
       />
+
+      {/* PWA Offline Connectivity Indicator */}
+      <OfflineIndicator />
 
       {/* Top-Left Compact Map Style Switcher (100% Free Open Maps) & Wind Legend */}
       <div className="fixed top-16 left-4 sm:left-6 z-20 flex flex-col gap-2 pointer-events-none">

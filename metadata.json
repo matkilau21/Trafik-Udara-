@@ -1,0 +1,6 @@
+{
+  "name": "Aero3D — Pelacak Penerbangan 3D Realtime",
+  "description": "Pelacak penerbangan global 3D realtime dengan visualisasi bola dunia interaktif dan notifikasi otomatis untuk setiap perubahan status jadwal keberangkatan dan kedatangan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

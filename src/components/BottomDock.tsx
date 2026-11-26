@@ -1,13 +1,13 @@
 import {
   BarChart3,
+  Box,
   ChevronDown,
   ChevronUp,
-  Compass,
-  Globe,
   MapPin,
   Pause,
   Play,
   Route,
+  Wind,
 } from 'lucide-react';
 import {
   CameraPreset,
@@ -35,10 +35,12 @@ interface BottomDockProps {
   onSelectSpeed: (speed: 1 | 5 | 15) => void;
   showRoutes: boolean;
   onToggleRoutes: () => void;
+  showWeather: boolean;
+  onToggleWeather: () => void;
   showAirportLabels: boolean;
   onToggleAirportLabels: () => void;
-  autoRotate: boolean;
-  onToggleAutoRotate: () => void;
+  tilt3D: boolean;
+  onToggleTilt3D: () => void;
 }
 
 const CAMERA_OPTIONS: Array<{ id: CameraPreset; label: string }> = [
@@ -76,10 +78,12 @@ export function BottomDock({
   onSelectSpeed,
   showRoutes,
   onToggleRoutes,
+  showWeather,
+  onToggleWeather,
   showAirportLabels,
   onToggleAirportLabels,
-  autoRotate,
-  onToggleAutoRotate,
+  tilt3D,
+  onToggleTilt3D,
 }: BottomDockProps) {
   return (
     <div
@@ -222,6 +226,20 @@ export function BottomDock({
 
             <button
               type="button"
+              onClick={onToggleWeather}
+              title="Papar peta aliran angin dan cuaca permukaan"
+              className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium rounded-lg border transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 ${
+                showWeather
+                  ? 'bg-teal-500/20 text-teal-200 border-teal-400/35'
+                  : 'bg-slate-900/70 text-slate-400 border-white/5 hover:text-slate-200'
+              }`}
+            >
+              <Wind className="w-3.5 h-3.5" aria-hidden="true" />
+              <span>Cuaca</span>
+            </button>
+
+            <button
+              type="button"
               onClick={onToggleRoutes}
               title="Papar laluan penerbangan 3D"
               className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium rounded-lg border transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 ${
@@ -250,20 +268,16 @@ export function BottomDock({
 
             <button
               type="button"
-              onClick={onToggleAutoRotate}
-              title="Putaran glob automatik"
+              onClick={onToggleTilt3D}
+              title={tilt3D ? 'Tukar kepada paparan rata 2D' : 'Aktifkan sudut perspektif 3D'}
               className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium rounded-lg border transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 ${
-                autoRotate
+                tilt3D
                   ? 'bg-sky-500/15 text-sky-200 border-sky-400/30'
                   : 'bg-slate-900/70 text-slate-400 border-white/5 hover:text-slate-200'
               }`}
             >
-              {autoRotate ? (
-                <Globe className="w-3.5 h-3.5" aria-hidden="true" />
-              ) : (
-                <Compass className="w-3.5 h-3.5" aria-hidden="true" />
-              )}
-              <span>Orbit</span>
+              <Box className="w-3.5 h-3.5" aria-hidden="true" />
+              <span>{tilt3D ? '3D' : '2D'}</span>
             </button>
           </div>
         </div>

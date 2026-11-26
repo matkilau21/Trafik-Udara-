@@ -14,6 +14,8 @@ export type NotificationScope = 'SEMUA' | 'DIPANTAU' | 'GANGGUAN_DAN_TIBA';
 
 export type CameraPreset = 'KLIA' | 'MALAYSIA' | 'ASIA_PASIFIK' | 'GLOBAL' | 'IKUTI';
 
+export type MapStyleId = 'jalan' | 'radar' | 'satelit';
+
 export type StatusFilter = 'SEMUA' | 'MENGUDARA' | 'KEBERANGKATAN' | 'TERTUNDA' | 'MENDARAT';
 
 export interface Airport {
@@ -110,6 +112,31 @@ export interface KliaTrafficPoint {
   berlepas: number;
   ketibaan: number;
   tertangguh: number;
+}
+
+export interface ProjectedWindStation {
+  id: string;
+  name: string;
+  x: number;
+  y: number;
+  speedKmh: number;
+  flowAngleDeg: number;
+  fromCardinal: string;
+  lat: number;
+  lon: number;
+}
+
+export interface PinnedWindProbe {
+  lat: number;
+  lon: number;
+  speedKmh: number;
+  speedKts: number;
+  flowAngleDeg: number;
+  fromCardinal: string;
+  tempC: number;
+  pressureHpa: number;
+  rainMmHr: number;
+  condition: string;
 }
 
 export const STATUS_META: Record<

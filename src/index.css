@@ -58,3 +58,66 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* MapLibre GL JS native controls styled cleanly to match the Aero3D dark HUD */
+.maplibregl-ctrl-bottom-right {
+  bottom: 14px !important;
+  right: 14px !important;
+  z-index: 20 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.maplibregl-ctrl-bottom-right .maplibregl-ctrl {
+  margin: 0 !important;
+}
+
+.maplibregl-ctrl-group {
+  background: rgba(10, 16, 29, 0.92) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45) !important;
+  overflow: hidden;
+}
+
+.maplibregl-ctrl-group button {
+  background-color: transparent !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.maplibregl-ctrl-group button:hover {
+  background-color: rgba(56, 189, 248, 0.16) !important;
+}
+
+.maplibregl-ctrl-group button .maplibregl-ctrl-icon {
+  filter: invert(0.92) brightness(1.1);
+}
+
+.maplibregl-ctrl-scale {
+  background-color: rgba(10, 16, 29, 0.85) !important;
+  border-color: rgba(148, 163, 184, 0.7) !important;
+  color: rgba(226, 232, 240, 0.9) !important;
+  font-family: var(--font-mono);
+  font-size: 10px !important;
+  border-radius: 4px !important;
+  padding: 1px 6px !important;
+}
+
+.maplibregl-ctrl-attrib {
+  background-color: rgba(10, 16, 29, 0.78) !important;
+  color: rgba(203, 213, 225, 0.75) !important;
+  font-size: 10px !important;
+  border-radius: 6px !important;
+  padding: 2px 7px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.maplibregl-ctrl-attrib a {
+  color: rgba(148, 163, 184, 0.92) !important;
+}
+
+
